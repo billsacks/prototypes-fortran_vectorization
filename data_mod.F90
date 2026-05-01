@@ -2,15 +2,17 @@ module data_mod
    implicit none
    private
 
+   integer, parameter, public :: r8 = selected_real_kind(12)
+
    type, public :: mytype
-      real, pointer :: data_p1(:)
-      real, pointer :: data_p2(:)
-      real, pointer, contiguous :: data_pc1(:)
-      real, pointer, contiguous :: data_pc2(:)
-      real, allocatable :: data_a1(:)
-      real, allocatable :: data_a2(:)
-      real :: data_s1(300)
-      real :: data_s2(300)
+      real(r8), pointer :: data_p1(:)
+      real(r8), pointer :: data_p2(:)
+      real(r8), pointer, contiguous :: data_pc1(:)
+      real(r8), pointer, contiguous :: data_pc2(:)
+      real(r8), allocatable :: data_a1(:)
+      real(r8), allocatable :: data_a2(:)
+      real(r8) :: data_s1(300)
+      real(r8) :: data_s2(300)
    end type
 
    type(mytype), public :: myinst
