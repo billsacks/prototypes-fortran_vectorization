@@ -1,0 +1,157 @@
+doit:
+     15, Loop not fused: function call before adjacent loop
+         Loop not vectorized: data dependency
+     16, Conflict or overlap between local_inst%data_p1 and local_inst%data_p2
+         FMA (fused multiply-add) instruction(s) generated
+     21, Loop not fused: function call before adjacent loop
+         Loop not vectorized: data dependency
+     22, Conflict or overlap between local_inst%data_pc1 and local_inst%data_pc2
+         FMA (fused multiply-add) instruction(s) generated
+     27, Loop not fused: function call before adjacent loop
+         Loop not vectorized: unprofitable for target
+     28, FMA (fused multiply-add) instruction(s) generated
+     33, Loop not fused: function call before adjacent loop
+         Generated vector simd code for the loop
+     34, FMA (fused multiply-add) instruction(s) generated
+     40, Loop not fused: function call before adjacent loop
+         Loop versioned for possible aliasing
+         Generated vector simd code for the loop
+         Loop unrolled 4 times
+         Loop unrolled 2 times
+     41, Conflict or overlap between data_p1 and data_p2
+         FMA (fused multiply-add) instruction(s) generated
+     48, Loop not fused: function call before adjacent loop
+         Loop versioned for possible aliasing
+         Generated vector simd code for the loop
+         Loop unrolled 4 times
+     49, Conflict or overlap between data_pc1 and data_pc2
+         FMA (fused multiply-add) instruction(s) generated
+     56, Loop not fused: function call before adjacent loop
+         Loop versioned for possible aliasing
+         Generated vector simd code for the loop
+         Loop unrolled 4 times
+     57, Conflict or overlap between data_a1 and data_a2
+         FMA (fused multiply-add) instruction(s) generated
+     64, Loop not fused: function call before adjacent loop
+         Loop versioned for possible aliasing
+         Generated vector simd code for the loop
+         Loop unrolled 4 times
+     65, Conflict or overlap between data_s1 and data_s2
+         FMA (fused multiply-add) instruction(s) generated
+driver:
+     11, Loop not fused: function call before adjacent loop
+         Loop not vectorized: data dependency
+     12, Conflict or overlap between myinst%data_p1 and myinst%data_p2
+         FMA (fused multiply-add) instruction(s) generated
+     17, Loop not fused: function call before adjacent loop
+         Loop not vectorized: data dependency
+     18, Conflict or overlap between myinst%data_pc1 and myinst%data_pc2
+         FMA (fused multiply-add) instruction(s) generated
+     23, Loop not fused: function call before adjacent loop
+         Loop not vectorized: data dependency
+     24, FMA (fused multiply-add) instruction(s) generated
+     29, Loop not fused: function call before adjacent loop
+         Loop not vectorized: data dependency
+         Loop unrolled 4 times
+     30, FMA (fused multiply-add) instruction(s) generated
+     36, Loop not fused: function call before adjacent loop
+         Loop versioned for possible aliasing
+         Generated vector simd code for the loop
+         Loop unrolled 4 times
+         Loop unrolled 2 times
+     37, Conflict or overlap between data_p1 and data_p2
+         FMA (fused multiply-add) instruction(s) generated
+     44, Loop not fused: function call before adjacent loop
+         Loop versioned for possible aliasing
+         Generated vector simd code for the loop
+         Loop unrolled 4 times
+     45, Conflict or overlap between data_pc1 and data_pc2
+         FMA (fused multiply-add) instruction(s) generated
+     52, Loop not fused: function call before adjacent loop
+         Loop versioned for possible aliasing
+         Generated vector simd code for the loop
+         Loop unrolled 4 times
+     53, Conflict or overlap between data_a1 and data_a2
+         FMA (fused multiply-add) instruction(s) generated
+     60, Loop not fused: function call before adjacent loop
+         Loop versioned for possible aliasing
+         Generated vector simd code for the loop
+         Loop unrolled 4 times
+     61, Conflict or overlap between data_s1 and data_s2
+         FMA (fused multiply-add) instruction(s) generated
+     66, doit_local inlined, size=202, file vectorize_test.F90 (71)
+          77, Loop not fused: function call before adjacent loop
+              Loop not vectorized: data dependency
+          78, Loop not fused: function call before adjacent loop
+              Loop not vectorized: data dependency
+          84, Loop not fused: function call before adjacent loop
+              Loop not vectorized: data dependency
+          90, Loop not fused: function call before adjacent loop
+              Loop not vectorized: data dependency
+              Loop unrolled 4 times
+          96, Loop not fused: function call before adjacent loop
+              Loop versioned for possible aliasing
+              Generated vector simd code for the loop
+              Loop unrolled 4 times
+              Loop unrolled 2 times
+         103, Loop not fused: function call before adjacent loop
+              Loop versioned for possible aliasing
+              Generated vector simd code for the loop
+              Loop unrolled 4 times
+              Loop unrolled 2 times
+         111, Loop not fused: function call before adjacent loop
+              Loop versioned for possible aliasing
+              Generated vector simd code for the loop
+              Loop unrolled 4 times
+              Loop unrolled 2 times
+         119, Loop not fused: function call before adjacent loop
+              Loop not vectorized: data dependency
+              Loop unrolled 2 times
+     78, FMA (fused multiply-add) instruction(s) generated
+     84, FMA (fused multiply-add) instruction(s) generated
+     90, FMA (fused multiply-add) instruction(s) generated
+     96, FMA (fused multiply-add) instruction(s) generated
+    103, FMA (fused multiply-add) instruction(s) generated
+    111, FMA (fused multiply-add) instruction(s) generated
+    119, FMA (fused multiply-add) instruction(s) generated
+    127, FMA (fused multiply-add) instruction(s) generated
+doit_local:
+     77, Loop not fused: function call before adjacent loop
+         Loop not vectorized: data dependency
+     78, Conflict or overlap between local_inst%data_p1 and local_inst%data_p2
+         FMA (fused multiply-add) instruction(s) generated
+     83, Loop not fused: function call before adjacent loop
+         Loop not vectorized: data dependency
+     84, Conflict or overlap between local_inst%data_pc1 and local_inst%data_pc2
+         FMA (fused multiply-add) instruction(s) generated
+     89, Loop not fused: function call before adjacent loop
+         Loop not vectorized: unprofitable for target
+     90, FMA (fused multiply-add) instruction(s) generated
+     95, Loop not fused: function call before adjacent loop
+         Generated vector simd code for the loop
+     96, FMA (fused multiply-add) instruction(s) generated
+    102, Loop not fused: function call before adjacent loop
+         Loop versioned for possible aliasing
+         Generated vector simd code for the loop
+         Loop unrolled 4 times
+         Loop unrolled 2 times
+    103, Conflict or overlap between data_p1 and data_p2
+         FMA (fused multiply-add) instruction(s) generated
+    110, Loop not fused: function call before adjacent loop
+         Loop versioned for possible aliasing
+         Generated vector simd code for the loop
+         Loop unrolled 4 times
+    111, Conflict or overlap between data_pc1 and data_pc2
+         FMA (fused multiply-add) instruction(s) generated
+    118, Loop not fused: function call before adjacent loop
+         Loop versioned for possible aliasing
+         Generated vector simd code for the loop
+         Loop unrolled 4 times
+    119, Conflict or overlap between data_a1 and data_a2
+         FMA (fused multiply-add) instruction(s) generated
+    126, Loop not fused: function call before adjacent loop
+         Loop versioned for possible aliasing
+         Generated vector simd code for the loop
+         Loop unrolled 4 times
+    127, Conflict or overlap between data_s1 and data_s2
+         FMA (fused multiply-add) instruction(s) generated
