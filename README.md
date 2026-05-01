@@ -12,7 +12,7 @@ Compile with one of these:
 ## Results with ifx
 Using 2025.2.1 on derecho
 
-See `vectorize_test.optrpt` for details.
+See `vectorize_test.optrpt` and `doit_mod.optrpt` for details.
 
 Summary of results:
 - Main program
