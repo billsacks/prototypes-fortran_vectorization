@@ -39,13 +39,13 @@ LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (2
 <Multiversioned v1>
     remark #25228: Loop multiversioned for Data Dependence
     remark #15300: LOOP WAS VECTORIZED
-    remark #15305: vectorization support: vector length 8
+    remark #15305: vectorization support: vector length 4
     remark #15389: vectorization support: unmasked unaligned unit stride load: [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (22, 46) ] 
     remark #15389: vectorization support: unmasked unaligned unit stride store: [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (22, 10) ] 
     remark #15475: --- begin vector loop cost summary ---
     remark #15476: scalar cost: 7.000000 
-    remark #15477: vector cost: 2.078125 
-    remark #15478: estimated potential speedup: 3.312500 
+    remark #15477: vector cost: 2.671875 
+    remark #15478: estimated potential speedup: 2.593750 
     remark #15309: vectorization support: normalized vectorization overhead 0.000000
     remark #15570: using scalar loop trip count: 300
     remark #15488: --- end vector loop cost summary ---
@@ -53,21 +53,6 @@ LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (2
     remark #15450: unmasked unaligned unit stride loads: 1 
     remark #15451: unmasked unaligned unit stride stores: 1 
     remark #15474: --- end vector loop memory reference summary ---
-LOOP END
-
-LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (21, 7)
-<Remainder loop for vectorization>
-    remark #15439: remainder loop was vectorized (unmasked)
-    remark #15305: vectorization support: vector length 4
-    remark #15389: vectorization support: unmasked unaligned unit stride load: [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (22, 46) ] 
-    remark #15389: vectorization support: unmasked unaligned unit stride store: [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (22, 10) ] 
-    remark #15475: --- begin vector loop cost summary ---
-    remark #15488: --- end vector loop cost summary ---
-    remark #15447: --- begin vector loop memory reference summary ---
-    remark #15450: unmasked unaligned unit stride loads: 1 
-    remark #15451: unmasked unaligned unit stride stores: 1 
-    remark #15474: --- end vector loop memory reference summary ---
-    remark #25261: Single iteration loop optimized away
 LOOP END
 
 LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (27, 7)
@@ -79,13 +64,13 @@ LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (2
 <Multiversioned v1>
     remark #25228: Loop multiversioned for Data Dependence
     remark #15300: LOOP WAS VECTORIZED
-    remark #15305: vectorization support: vector length 8
+    remark #15305: vectorization support: vector length 4
     remark #15389: vectorization support: unmasked unaligned unit stride load: [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (28, 45) ] 
     remark #15389: vectorization support: unmasked unaligned unit stride store: [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (28, 10) ] 
     remark #15475: --- begin vector loop cost summary ---
     remark #15476: scalar cost: 7.000000 
-    remark #15477: vector cost: 2.078125 
-    remark #15478: estimated potential speedup: 3.312500 
+    remark #15477: vector cost: 2.671875 
+    remark #15478: estimated potential speedup: 2.593750 
     remark #15309: vectorization support: normalized vectorization overhead 0.000000
     remark #15570: using scalar loop trip count: 300
     remark #15488: --- end vector loop cost summary ---
@@ -93,32 +78,17 @@ LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (2
     remark #15450: unmasked unaligned unit stride loads: 1 
     remark #15451: unmasked unaligned unit stride stores: 1 
     remark #15474: --- end vector loop memory reference summary ---
-LOOP END
-
-LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (27, 7)
-<Remainder loop for vectorization>
-    remark #15439: remainder loop was vectorized (unmasked)
-    remark #15305: vectorization support: vector length 4
-    remark #15389: vectorization support: unmasked unaligned unit stride load: [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (28, 45) ] 
-    remark #15389: vectorization support: unmasked unaligned unit stride store: [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (28, 10) ] 
-    remark #15475: --- begin vector loop cost summary ---
-    remark #15488: --- end vector loop cost summary ---
-    remark #15447: --- begin vector loop memory reference summary ---
-    remark #15450: unmasked unaligned unit stride loads: 1 
-    remark #15451: unmasked unaligned unit stride stores: 1 
-    remark #15474: --- end vector loop memory reference summary ---
-    remark #25261: Single iteration loop optimized away
 LOOP END
 
 LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (33, 7)
     remark #15300: LOOP WAS VECTORIZED
-    remark #15305: vectorization support: vector length 8
+    remark #15305: vectorization support: vector length 4
     remark #15389: vectorization support: unmasked unaligned unit stride load: local_inst [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (34, 45) ] 
     remark #15389: vectorization support: unmasked unaligned unit stride store: local_inst [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (34, 10) ] 
     remark #15475: --- begin vector loop cost summary ---
     remark #15476: scalar cost: 6.000000 
-    remark #15477: vector cost: 1.828125 
-    remark #15478: estimated potential speedup: 3.218750 
+    remark #15477: vector cost: 2.421875 
+    remark #15478: estimated potential speedup: 2.453125 
     remark #15309: vectorization support: normalized vectorization overhead 0.000000
     remark #15570: using scalar loop trip count: 300
     remark #15488: --- end vector loop cost summary ---
@@ -126,21 +96,6 @@ LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (3
     remark #15450: unmasked unaligned unit stride loads: 1 
     remark #15451: unmasked unaligned unit stride stores: 1 
     remark #15474: --- end vector loop memory reference summary ---
-LOOP END
-
-LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (33, 7)
-<Remainder loop for vectorization>
-    remark #15439: remainder loop was vectorized (unmasked)
-    remark #15305: vectorization support: vector length 4
-    remark #15389: vectorization support: unmasked unaligned unit stride load: local_inst [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (34, 45) ] 
-    remark #15389: vectorization support: unmasked unaligned unit stride store: local_inst [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (34, 10) ] 
-    remark #15475: --- begin vector loop cost summary ---
-    remark #15488: --- end vector loop cost summary ---
-    remark #15447: --- begin vector loop memory reference summary ---
-    remark #15450: unmasked unaligned unit stride loads: 1 
-    remark #15451: unmasked unaligned unit stride stores: 1 
-    remark #15474: --- end vector loop memory reference summary ---
-    remark #25261: Single iteration loop optimized away
 LOOP END
 
 LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (40, 7)
@@ -226,13 +181,13 @@ LOOP END
 
 LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (64, 7)
     remark #15300: LOOP WAS VECTORIZED
-    remark #15305: vectorization support: vector length 8
+    remark #15305: vectorization support: vector length 4
     remark #15389: vectorization support: unmasked unaligned unit stride load: local_inst [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (65, 23) ] 
     remark #15389: vectorization support: unmasked unaligned unit stride store: local_inst [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (65, 10) ] 
     remark #15475: --- begin vector loop cost summary ---
     remark #15476: scalar cost: 6.000000 
-    remark #15477: vector cost: 1.828125 
-    remark #15478: estimated potential speedup: 3.250000 
+    remark #15477: vector cost: 2.390625 
+    remark #15478: estimated potential speedup: 2.500000 
     remark #15309: vectorization support: normalized vectorization overhead 0.000000
     remark #15570: using scalar loop trip count: 300
     remark #15488: --- end vector loop cost summary ---
@@ -240,21 +195,6 @@ LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (6
     remark #15450: unmasked unaligned unit stride loads: 1 
     remark #15451: unmasked unaligned unit stride stores: 1 
     remark #15474: --- end vector loop memory reference summary ---
-LOOP END
-
-LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (64, 7)
-<Remainder loop for vectorization>
-    remark #15439: remainder loop was vectorized (unmasked)
-    remark #15305: vectorization support: vector length 4
-    remark #15389: vectorization support: unmasked unaligned unit stride load: local_inst [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (65, 23) ] 
-    remark #15389: vectorization support: unmasked unaligned unit stride store: local_inst [ /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90 (65, 10) ] 
-    remark #15475: --- begin vector loop cost summary ---
-    remark #15488: --- end vector loop cost summary ---
-    remark #15447: --- begin vector loop memory reference summary ---
-    remark #15450: unmasked unaligned unit stride loads: 1 
-    remark #15451: unmasked unaligned unit stride stores: 1 
-    remark #15474: --- end vector loop memory reference summary ---
-    remark #25261: Single iteration loop optimized away
 LOOP END
 =================================================================
 
@@ -350,13 +290,13 @@ COMPILE FUNC: doit_mod::doit_
    -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(50,7)
    -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(58,7)
    -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(66,7)
-   -> DELETE: llvm.masked.gather.v2f32.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(16,45)
-   -> DELETE: llvm.masked.scatter.v2f32.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(16,10)
-   -> DELETE: llvm.masked.gather.v2f32.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(41,23)
-   -> DELETE: llvm.masked.scatter.v2f32.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(41,10)
-   -> DELETE: llvm.masked.gather.v2f32.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(49,24)
-   -> DELETE: llvm.masked.scatter.v2f32.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(49,10)
-   -> DELETE: llvm.masked.gather.v2f32.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(57,23)
-   -> DELETE: llvm.masked.scatter.v2f32.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(57,10)
+   -> DELETE: llvm.masked.gather.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(16,45)
+   -> DELETE: llvm.masked.scatter.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(16,10)
+   -> DELETE: llvm.masked.gather.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(41,23)
+   -> DELETE: llvm.masked.scatter.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(41,10)
+   -> DELETE: llvm.masked.gather.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(49,24)
+   -> DELETE: llvm.masked.scatter.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(49,10)
+   -> DELETE: llvm.masked.gather.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(57,23)
+   -> DELETE: llvm.masked.scatter.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/doit_mod.F90(57,10)
 
 ---- End Inlining Report ------

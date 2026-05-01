@@ -50,11 +50,11 @@ Option Values:
 COMPILE FUNC: data_mod._
 
 COMPILE FUNC: data_mod::init_
-   -> EXTERN: for_allocate_handle /glade/work/sacks/prototypes/fortran_vectorization/data_mod.F90(23,7)
-   -> EXTERN: for_allocate_handle /glade/work/sacks/prototypes/fortran_vectorization/data_mod.F90(24,7)
    -> EXTERN: for_allocate_handle /glade/work/sacks/prototypes/fortran_vectorization/data_mod.F90(25,7)
    -> EXTERN: for_allocate_handle /glade/work/sacks/prototypes/fortran_vectorization/data_mod.F90(26,7)
-   -> EXTERN: for_alloc_allocatable_handle /glade/work/sacks/prototypes/fortran_vectorization/data_mod.F90(27,7)
-   -> EXTERN: for_alloc_allocatable_handle /glade/work/sacks/prototypes/fortran_vectorization/data_mod.F90(28,7)
+   -> EXTERN: for_allocate_handle /glade/work/sacks/prototypes/fortran_vectorization/data_mod.F90(27,7)
+   -> EXTERN: for_allocate_handle /glade/work/sacks/prototypes/fortran_vectorization/data_mod.F90(28,7)
+   -> EXTERN: for_alloc_allocatable_handle /glade/work/sacks/prototypes/fortran_vectorization/data_mod.F90(29,7)
+   -> EXTERN: for_alloc_allocatable_handle /glade/work/sacks/prototypes/fortran_vectorization/data_mod.F90(30,7)
 
 ---- End Inlining Report ------
