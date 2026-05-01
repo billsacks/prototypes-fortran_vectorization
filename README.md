@@ -29,6 +29,11 @@ Summary of results:
 - Subroutine, separate module (doit): Basically the same results, though some small differences in estimated speedups
 - Subroutine, local to the main program (doit_local): Basically the same results, though some small differences in estimated speedups
 
+Conclusions:
+- Pointers (without the contiguous attribute) prevent profitable vectorization
+- Allocatable arrays or pointers declared as contiguous allow profitable vectorization
+- Associates prevent profitable vectorization for any dynamically-sized arrays (I don't understand why this behavior differs for dynamically-sized arrays compared with statically-sized arrays)
+
 ## Results with nvfortran
 Using 25.9-0 on derecho
 
@@ -40,14 +45,29 @@ Summary of results:
     - Pointer: Loop not vectorized: data dependency
     - Pointer contiguous: Loop not vectorized: data dependency
     - Allocatable: Loop not vectorized: data dependency
-    - Static: Loop not vectorized: data dependency (however, loop was unrolled 8 times)
+    - Static: Loop not vectorized: data dependency
   - With associates
     - Pointer: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
     - Pointer contiguous: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
     - Allocatable: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
     - Static: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
-- Subroutine
+- Subroutine, separate module (doit)
   - Without associates
     - Pointer: Loop not vectorized: data dependency
     - Pointer contiguous: Loop not vectorized: data dependency
-    -
+    - Allocatable: Loop not vectorized: unprofitable for target
+    - Static: Generated vector simd code for the loop
+  - With associates
+    - Pointer: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
+    - Pointer contiguous: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
+    - Allocatable: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
+    - Static: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
+- Subroutine, local to the main program (doit_local): Same results as for Subroutine, separate module (doit)
+
+I'm confused about the result for allocatables, because in a different test, I was seeing allocatables being vectorized in some cases (using a pattern similar to the doit_local pattern here). So I'm unclear why now this is giving "unprofitable for target". That other test used different code, but seemed fundamentally similar, so I'm not sure what's causing the difference.
+
+Conclusions:
+- Results are sensitive to whether the code is in a subroutine (one hypothesis is that, in the subroutine, the compiler has better access to the type definition, since the instance is an argument declared to be the given type, and this can better inform the optimization).
+- Pointers (with or without the contiguous attribute) prevent vectorization
+- Allocatable arrays seem to allow vectorization in principle, but in this example it was deemed unprofitable for some reason
+- Wrapping the code in an associate block allows vectorization (this feels wrong to me)
