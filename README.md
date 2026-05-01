@@ -10,6 +10,9 @@ Compile with one of these:
 ## Results with ifx
 Using 2025.2.1 on derecho
 
+See vectorize_test.optrpt for details.
+
+Summary of results:
 - Main program
   - Without associates
     - Pointer: Vectorization not profitable (estimated potential speedup: 0.359375)
