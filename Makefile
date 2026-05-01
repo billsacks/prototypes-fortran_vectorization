@@ -10,13 +10,16 @@ else
 endif
 endif
 
-OBJ := vectorize_test.F90
+OBJ := data_mod.o doit_mod.o vectorize_test.o
 
 tester: $(OBJ)
 	$(FC) $(FFLAGS) -o $@ $(OBJ)
 
 %.o: %.F90
 	$(FC) $(FFLAGS) -c $< -o $@
+
+doit_mod.o: data_mod.o
+vectorize_test.o: data_mod.o doit_mod.o
 
 .PHONY: clean
 clean:

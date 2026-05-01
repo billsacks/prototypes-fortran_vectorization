@@ -12,7 +12,7 @@ Compile with one of these:
 ## Results with ifx
 Using 2025.2.1 on derecho
 
-See vectorize_test.optrpt for details.
+See `vectorize_test.optrpt` for details.
 
 Summary of results:
 - Main program
@@ -29,4 +29,24 @@ Summary of results:
 - Subroutine: Basically the same results, though some small differences in estimated speedups
 
 ## Results with nvfortran
+Using 25.9-0 on derecho
 
+See `nvfortran_out` for details.
+
+Summary of results:
+- Main program
+  - Without associates
+    - Pointer: Loop not vectorized: data dependency
+    - Pointer contiguous: Loop not vectorized: data dependency
+    - Allocatable: Loop not vectorized: data dependency
+    - Static: Loop not vectorized: data dependency (however, loop was unrolled 8 times)
+  - With associates
+    - Pointer: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
+    - Pointer contiguous: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
+    - Allocatable: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
+    - Static: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
+- Subroutine
+  - Without associates
+    - Pointer: Loop not vectorized: data dependency
+    - Pointer contiguous: Loop not vectorized: data dependency
+    -
