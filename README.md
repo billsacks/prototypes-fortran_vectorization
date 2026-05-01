@@ -7,6 +7,8 @@ Compile with one of these:
 - `make FC=ifx`
 - `make FC=gfortran`
 
+(On derecho, with appropriate modules loaded, FC will be set automatically, so can just compile with `make`.)
+
 ## Results with ifx
 Using 2025.2.1 on derecho
 
