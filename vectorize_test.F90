@@ -20,12 +20,12 @@ module data_mod
 contains
 
    subroutine init()
-      allocate(myinst%data_p1(30))
-      allocate(myinst%data_p2(30))
-      allocate(myinst%data_pc1(30))
-      allocate(myinst%data_pc2(30))
-      allocate(myinst%data_a1(30))
-      allocate(myinst%data_a2(30))
+      allocate(myinst%data_p1(300))
+      allocate(myinst%data_p2(300))
+      allocate(myinst%data_pc1(300))
+      allocate(myinst%data_pc2(300))
+      allocate(myinst%data_a1(300))
+      allocate(myinst%data_a2(300))
    end subroutine init
 
 end module data_mod
