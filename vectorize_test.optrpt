@@ -188,6 +188,203 @@ LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.
 LOOP END
 =================================================================
 
+Begin optimization report for: driver::doit_local_
+
+LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (77, 7)
+<Multiversioned v2>
+    remark #15615: Loop was not vectorized: fall-back loop for multiversioning
+LOOP END
+
+LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (77, 7)
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 2
+    remark #15328: vectorization support: unmasked gather load: [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (78, 45) ] 
+    remark #15329: vectorization support: unmasked scatter store: [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (78, 10) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 7.000000 
+    remark #15477: vector cost: 19.000000 
+    remark #15478: estimated potential speedup: 0.359375 
+    remark #15309: vectorization support: normalized vectorization overhead 0.000000
+    remark #15570: using scalar loop trip count: 300
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15462: unmasked indexed (or gather) loads: 1 
+    remark #15463: unmasked indexed (or scatter) stores: 1 
+    remark #15567: Gathers are generated due to non-unit stride index of the corresponding loads.
+    remark #15568: Scatters are generated due to non-unit stride index of the corresponding stores.
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (83, 7)
+<Multiversioned v2>
+    remark #15615: Loop was not vectorized: fall-back loop for multiversioning
+LOOP END
+
+LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (83, 7)
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (84, 46) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (84, 10) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 7.000000 
+    remark #15477: vector cost: 2.671875 
+    remark #15478: estimated potential speedup: 2.593750 
+    remark #15309: vectorization support: normalized vectorization overhead 0.000000
+    remark #15570: using scalar loop trip count: 300
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (89, 7)
+<Multiversioned v2>
+    remark #15615: Loop was not vectorized: fall-back loop for multiversioning
+LOOP END
+
+LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (89, 7)
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (90, 45) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (90, 10) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 7.000000 
+    remark #15477: vector cost: 2.671875 
+    remark #15478: estimated potential speedup: 2.593750 
+    remark #15309: vectorization support: normalized vectorization overhead 0.000000
+    remark #15570: using scalar loop trip count: 300
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (95, 7)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: local_inst [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (96, 45) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: local_inst [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (96, 10) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 6.000000 
+    remark #15477: vector cost: 2.421875 
+    remark #15478: estimated potential speedup: 2.453125 
+    remark #15309: vectorization support: normalized vectorization overhead 0.000000
+    remark #15570: using scalar loop trip count: 300
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (102, 7)
+<Multiversioned v2>
+    remark #15615: Loop was not vectorized: fall-back loop for multiversioning
+LOOP END
+
+LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (102, 7)
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 2
+    remark #15328: vectorization support: unmasked gather load: [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (103, 23) ] 
+    remark #15329: vectorization support: unmasked scatter store: [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (103, 10) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 7.000000 
+    remark #15477: vector cost: 19.000000 
+    remark #15478: estimated potential speedup: 0.359375 
+    remark #15309: vectorization support: normalized vectorization overhead 0.000000
+    remark #15570: using scalar loop trip count: 300
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15462: unmasked indexed (or gather) loads: 1 
+    remark #15463: unmasked indexed (or scatter) stores: 1 
+    remark #15567: Gathers are generated due to non-unit stride index of the corresponding loads.
+    remark #15568: Scatters are generated due to non-unit stride index of the corresponding stores.
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (110, 7)
+<Multiversioned v2>
+    remark #15615: Loop was not vectorized: fall-back loop for multiversioning
+LOOP END
+
+LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (110, 7)
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 2
+    remark #15328: vectorization support: unmasked gather load: [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (111, 24) ] 
+    remark #15329: vectorization support: unmasked scatter store: [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (111, 10) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 7.000000 
+    remark #15477: vector cost: 19.000000 
+    remark #15478: estimated potential speedup: 0.359375 
+    remark #15309: vectorization support: normalized vectorization overhead 0.000000
+    remark #15570: using scalar loop trip count: 300
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15462: unmasked indexed (or gather) loads: 1 
+    remark #15463: unmasked indexed (or scatter) stores: 1 
+    remark #15567: Gathers are generated due to non-unit stride index of the corresponding loads.
+    remark #15568: Scatters are generated due to non-unit stride index of the corresponding stores.
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (118, 7)
+<Multiversioned v2>
+    remark #15615: Loop was not vectorized: fall-back loop for multiversioning
+LOOP END
+
+LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (118, 7)
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 2
+    remark #15328: vectorization support: unmasked gather load: [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (119, 23) ] 
+    remark #15329: vectorization support: unmasked scatter store: [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (119, 10) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 7.000000 
+    remark #15477: vector cost: 19.000000 
+    remark #15478: estimated potential speedup: 0.359375 
+    remark #15309: vectorization support: normalized vectorization overhead 0.000000
+    remark #15570: using scalar loop trip count: 300
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15462: unmasked indexed (or gather) loads: 1 
+    remark #15463: unmasked indexed (or scatter) stores: 1 
+    remark #15567: Gathers are generated due to non-unit stride index of the corresponding loads.
+    remark #15568: Scatters are generated due to non-unit stride index of the corresponding stores.
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (126, 7)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: local_inst [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (127, 23) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: local_inst [ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90 (127, 10) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 6.000000 
+    remark #15477: vector cost: 2.390625 
+    remark #15478: estimated potential speedup: 2.500000 
+    remark #15309: vectorization support: normalized vectorization overhead 0.000000
+    remark #15570: using scalar loop trip count: 300
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+=================================================================
+
 Register allocation report for: MAIN
 FUNCTION BEGIN
  LOOP1 BEGIN at (vectorize_test.F90:23:4)
@@ -232,6 +429,52 @@ Routine stack
    Write Count : 0
 
 FUNCTION END
+Register allocation report for: driver::doit_local_
+FUNCTION BEGIN
+ LOOP1 BEGIN at (vectorize_test.F90:95:7)
+ LOOP1 END
+ LOOP1 BEGIN at (vectorize_test.F90:126:7)
+ LOOP1 END
+ LOOP1 BEGIN at (vectorize_test.F90:118:7)
+ LOOP1 END
+ LOOP1 BEGIN at (vectorize_test.F90:118:7)
+ LOOP1 END
+ LOOP1 BEGIN at (vectorize_test.F90:110:7)
+ LOOP1 END
+ LOOP1 BEGIN at (vectorize_test.F90:110:7)
+ LOOP1 END
+ LOOP1 BEGIN at (vectorize_test.F90:102:7)
+ LOOP1 END
+ LOOP1 BEGIN at (vectorize_test.F90:102:7)
+ LOOP1 END
+ LOOP1 BEGIN at (vectorize_test.F90:89:7)
+ LOOP1 END
+ LOOP1 BEGIN at (vectorize_test.F90:89:7)
+ LOOP1 END
+ LOOP1 BEGIN at (vectorize_test.F90:83:7)
+ LOOP1 END
+ LOOP1 BEGIN at (vectorize_test.F90:83:7)
+ LOOP1 END
+ LOOP1 BEGIN at (vectorize_test.F90:77:7)
+ LOOP1 END
+ LOOP1 BEGIN at (vectorize_test.F90:77:7)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 4 [ mxcsr rsp ssp rip  ]
+ Available : 10 [ rbp zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7 tmm4_tmm5 tmm6_tmm7  ]
+ Callee Saved : 5 [ rbx r12 r13 r14 r15  ]
+ Assigned : 28 [ eflags rax rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12  ]
+
+Routine stack 
+ Variables : 160 Bytes
+   Read Count : 0
+   Write Count : 24
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
 ---- Begin Inlining Report ----
 Option Values:
   inline-threshold: 225
@@ -240,6 +483,32 @@ Option Values:
   inlineoptsize-threshold: 15
 
 DEAD STATIC FUNC: llvm.ssa.copy.i64
+
+COMPILE FUNC: driver::doit_local_
+   -> EXTERN: for_write_seq_lis /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(80,7)
+   -> EXTERN: for_write_seq_lis /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(86,7)
+   -> EXTERN: for_write_seq_lis /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(92,7)
+   -> EXTERN: for_write_seq_lis /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(98,7)
+   -> EXTERN: for_write_seq_lis /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(105,7)
+   -> EXTERN: for_write_seq_lis /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(113,7)
+   -> EXTERN: for_write_seq_lis /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(121,7)
+   -> EXTERN: for_write_seq_lis /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(129,7)
+   -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(79,7)
+   -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(85,7)
+   -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(91,7)
+   -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(97,7)
+   -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(104,7)
+   -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(112,7)
+   -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(120,7)
+   -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(128,7)
+   -> DELETE: llvm.masked.gather.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(78,45)
+   -> DELETE: llvm.masked.scatter.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(78,10)
+   -> DELETE: llvm.masked.gather.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(103,23)
+   -> DELETE: llvm.masked.scatter.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(103,10)
+   -> DELETE: llvm.masked.gather.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(111,24)
+   -> DELETE: llvm.masked.scatter.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(111,10)
+   -> DELETE: llvm.masked.gather.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(119,23)
+   -> DELETE: llvm.masked.scatter.v2f64.v2p0 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(119,10)
 
 COMPILE FUNC: MAIN
    -> EXTERN: for_set_fpe_ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(1,9)
@@ -253,7 +522,8 @@ COMPILE FUNC: MAIN
    -> EXTERN: for_write_seq_lis /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(47,4)
    -> EXTERN: for_write_seq_lis /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(55,4)
    -> EXTERN: for_write_seq_lis /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(63,4)
-   -> EXTERN: doit_mod::doit_ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(66,9)
+   -> driver::doit_local_ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(66,9) (1890>225 [EE:565>562])
+   -> EXTERN: doit_mod::doit_ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(67,9)
    -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(13,4)
    -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(19,4)
    -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(25,4)
