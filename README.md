@@ -26,7 +26,8 @@ Summary of results:
     - Pointer contiguous: Vectorization not profitable (estimated potential speedup: 0.359375)
     - Allocatable: Vectorization not profitable (estimated potential speedup: 0.359375)
     - Static: Vectorization profitable (estimated potential speedup: 2.500000)
-- Subroutine: Basically the same results, though some small differences in estimated speedups
+- Subroutine, separate module (doit): Basically the same results, though some small differences in estimated speedups
+- Subroutine, local to the main program (doit_local): Basically the same results, though some small differences in estimated speedups
 
 ## Results with nvfortran
 Using 25.9-0 on derecho
