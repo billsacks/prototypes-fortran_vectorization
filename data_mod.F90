@@ -15,7 +15,7 @@ module data_mod
       real(r8) :: data_s2(300)
    end type
 
-   type(mytype), public :: myinst
+   type(mytype), public, target :: myinst
 
    public :: init
 
