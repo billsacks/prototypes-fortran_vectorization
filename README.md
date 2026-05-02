@@ -34,6 +34,8 @@ Conclusions:
 - Allocatable arrays or pointers declared as contiguous allow profitable vectorization
 - Associates prevent profitable vectorization for any dynamically-sized arrays (I don't understand why this behavior differs for dynamically-sized arrays compared with statically-sized arrays)
 
+Note: moving data_mod into the same file as the main program (vectorize_test.F90) didn't change the above results. (For this test, I deleted the doit module.)
+
 ## Results with nvfortran
 Using 25.9-0 on derecho
 
@@ -71,3 +73,5 @@ Conclusions:
 - Pointers (with or without the contiguous attribute) prevent vectorization
 - Allocatable arrays seem to allow vectorization in principle, but in this example it was deemed unprofitable for some reason
 - Wrapping the code in an associate block allows vectorization (this feels wrong to me)
+
+Note: moving data_mod into the same file as the main program (vectorize_test.F90) didn't change the above results. (For this test, I deleted the doit module.)
