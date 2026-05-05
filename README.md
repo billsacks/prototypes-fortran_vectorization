@@ -28,7 +28,7 @@ Summary of results:
     - Static: Vectorization profitable (estimated potential speedup: 2.500000)
 - Subroutine, separate module (doit): Basically the same results, though some small differences in estimated speedups
 - Subroutine, local to the main program (doit_local): Basically the same results, though some small differences in estimated speedups
-- Subroutine, separate module, with explicit array args, with contiguous attribute: Vectorization profitable (estimated potential speedup: 2.453125, so a bit less than other methods). (Note: vectorization was deemed unprofitable before adding the contiguous attribute; declaring the array with a given size rather than automatic was the same as declaring it as contiguous.)
+- Subroutine, separate module, with explicit array args, with contiguous attribute: Vectorization profitable (estimated potential speedup: 2.453125, so a bit less than other methods, but that may be because the starting cost was less to begin with). (Note: vectorization was deemed unprofitable before adding the contiguous attribute; declaring the array with a given size rather than automatic was the same as declaring it as contiguous.)
 
 Conclusions:
 - Pointers (without the contiguous attribute) prevent profitable vectorization
