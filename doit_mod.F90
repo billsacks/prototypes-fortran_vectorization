@@ -69,8 +69,8 @@ contains
    end subroutine doit
 
    subroutine doit_with_args(data1, data2)
-      real(r8), intent(out) :: data1(:)
-      real(r8), intent(in) :: data2(:)
+      real(r8), intent(out), contiguous :: data1(:)
+      real(r8), intent(in), contiguous :: data2(:)
 
       integer :: n
 
