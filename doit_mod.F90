@@ -1,13 +1,13 @@
 module doit_mod
+   use data_mod, only : r8, mytype
    implicit none
    private
 
    public :: doit
-
+   public :: doit_with_args
 contains
 
    subroutine doit(local_inst)
-      use data_mod, only : mytype
       type(mytype), intent(inout) :: local_inst
       integer :: n
 
@@ -67,5 +67,17 @@ contains
       print *, data_s1(300)
       end associate
    end subroutine doit
+
+   subroutine doit_with_args(data1, data2)
+      real(r8), intent(out) :: data1(:)
+      real(r8), intent(in) :: data2(:)
+
+      integer :: n
+
+      do n = 1, 300
+         data1(n) = data2(n) * data2(n) + data2(n)
+      end do
+
+   end subroutine doit_with_args
 
 end module doit_mod

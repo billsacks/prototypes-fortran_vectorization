@@ -1,6 +1,6 @@
 program driver
    use data_mod, only : myinst, init
-   use doit_mod, only : doit
+   use doit_mod, only : doit, doit_with_args
 
    implicit none
    integer :: c
@@ -65,7 +65,7 @@ program driver
 
    call doit_local(myinst)
    call doit(myinst)
-
+   call doit_with_args(myinst%data_a1, myinst%data_a2)
 contains
 
    subroutine doit_local(local_inst)
