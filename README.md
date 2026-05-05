@@ -28,11 +28,13 @@ Summary of results:
     - Static: Vectorization profitable (estimated potential speedup: 2.500000)
 - Subroutine, separate module (doit): Basically the same results, though some small differences in estimated speedups
 - Subroutine, local to the main program (doit_local): Basically the same results, though some small differences in estimated speedups
+- Subroutine, separate module, with explicit array args: Vectorization not profitable
 
 Conclusions:
 - Pointers (without the contiguous attribute) prevent profitable vectorization
 - Allocatable arrays or pointers declared as contiguous allow profitable vectorization
 - Associates prevent profitable vectorization for any dynamically-sized arrays (I don't understand why this behavior differs for dynamically-sized arrays compared with statically-sized arrays)
+- Having explicit array args prevents profitable vectorization
 
 Note: moving data_mod into the same file as the main program (vectorize_test.F90) didn't change the above results. (For this test, I deleted the doit module, along with moving data_mod into vectorize_test, so everything was in a single file.)
 
@@ -65,6 +67,7 @@ Summary of results:
     - Allocatable: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
     - Static: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
 - Subroutine, local to the main program (doit_local): Same results as for Subroutine, separate module (doit)
+- Subroutine, separate module, with explicit array args: Generated vector simd code for the loop
 
 I'm confused about the result for allocatables, because in a different test, I was seeing allocatables being vectorized in some cases (using a pattern similar to the doit_local pattern here). So I'm unclear why now this is giving "unprofitable for target". That other test used different code, but seemed fundamentally similar, so I'm not sure what's causing the difference.
 
@@ -73,5 +76,6 @@ Conclusions:
 - Pointers (with or without the contiguous attribute) prevent vectorization
 - Allocatable arrays seem to allow vectorization in principle, but in this example it was deemed unprofitable for some reason
 - Wrapping the code in an associate block allows vectorization (this feels wrong to me)
+- Having explicit array args allows vectorization
 
 Note: moving data_mod into the same file as the main program (vectorize_test.F90) didn't change the above results. (For this test, I deleted the doit module, along with moving data_mod into vectorize_test, so everything was in a single file.)
