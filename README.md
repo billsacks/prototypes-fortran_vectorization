@@ -28,7 +28,7 @@ Summary of results:
     - Static: Vectorization profitable (estimated potential speedup: 2.500000)
 - Subroutine, separate module (doit): Basically the same results, though some small differences in estimated speedups
 - Subroutine, local to the main program (doit_local): Basically the same results, though some small differences in estimated speedups
-- Subroutine, separate module, with explicit array args: Vectorization not profitable
+- Subroutine, separate module, with explicit array args, with contiguous attribute: Vectorization profitable (estimated potential speedup: 2.453125, so a bit less than other methods). (Note: vectorization was deemed unprofitable before adding the contiguous attribute; declaring the array with a given size rather than automatic was the same as declaring it as contiguous.)
 
 Conclusions:
 - Pointers (without the contiguous attribute) prevent profitable vectorization
@@ -67,7 +67,7 @@ Summary of results:
     - Allocatable: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
     - Static: Generated vector simd code for the loop (also, Loop versioned for possible aliasing)
 - Subroutine, local to the main program (doit_local): Same results as for Subroutine, separate module (doit)
-- Subroutine, separate module, with explicit array args: Generated vector simd code for the loop
+- Subroutine, separate module, with explicit array args: Generated vector simd code for the loop (same result whether the array is declared as contiguous or not, or with a given size rather than automatic).
 
 I'm confused about the result for allocatables, because in a different test, I was seeing allocatables being vectorized in some cases (using a pattern similar to the doit_local pattern here). So I'm unclear why now this is giving "unprofitable for target". That other test used different code, but seemed fundamentally similar, so I'm not sure what's causing the difference.
 
