@@ -524,6 +524,7 @@ COMPILE FUNC: MAIN
    -> EXTERN: for_write_seq_lis /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(63,4)
    -> driver::doit_local_ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(66,9) (1890>225 [EE:565>562])
    -> EXTERN: doit_mod::doit_ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(67,9)
+   -> EXTERN: doit_mod::doit_with_args_ /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(68,9)
    -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(13,4)
    -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(19,4)
    -> DELETE: llvm.ssa.copy.i64 /glade/work/sacks/prototypes/fortran_vectorization/vectorize_test.F90(25,4)

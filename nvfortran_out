@@ -38,6 +38,9 @@ doit:
          Loop unrolled 4 times
      65, Conflict or overlap between data_s1 and data_s2
          FMA (fused multiply-add) instruction(s) generated
+doit_with_args:
+     77, Generated vector simd code for the loop
+     78, FMA (fused multiply-add) instruction(s) generated
 driver:
      11, Loop not fused: function call before adjacent loop
          Loop not vectorized: data dependency
