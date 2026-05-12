@@ -34,7 +34,7 @@ Conclusions:
 - Pointers (without the contiguous attribute) prevent profitable vectorization
 - Allocatable arrays or pointers declared as contiguous allow profitable vectorization
 - Associates prevent profitable vectorization for any dynamically-sized arrays (I don't understand why this behavior differs for dynamically-sized arrays compared with statically-sized arrays)
-- Having explicit array args prevents profitable vectorization
+- Having explicit array args with the contiguous attribute allows profitable vectorization (the contiguous attribute is key)
 
 Note: moving data_mod into the same file as the main program (vectorize_test.F90) didn't change the above results. (For this test, I deleted the doit module, along with moving data_mod into vectorize_test, so everything was in a single file.)
 
